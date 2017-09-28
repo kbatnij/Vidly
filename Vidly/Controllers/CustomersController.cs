@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,30 +11,31 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
+        private ApplicationDbContext _context;
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         public ViewResult Index()
         {
-            var customers = GetCustomers();
+            var customers = _context.Customers.Include(s=> s.MembershipType).ToList();
 
             return View(customers);
         }
 
         public ActionResult Details(int Id)
         {
-            var customer = GetCustomers().FirstOrDefault(s => s.Id == Id);
+            var customer = _context.Customers.SingleOrDefault(s => s.Id == Id);
             if (customer == null)
             {
                 return HttpNotFound();
             }
             return View(customer);
-        }
-
-        private IEnumerable<Customer> GetCustomers()
-        {
-            return new List<Customer>
-            {
-                new Customer{Id = 1, Name = "Khaldon Batnij"},
-                new Customer{Id = 2, Name = "Cathy R"}
-            };
         }
     }
 }
