@@ -21,6 +21,12 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
+
+        public ViewResult New()
+        {
+            return View();
+        }
+
         public ViewResult Index()
         {
             var customers = _context.Customers.Include(s=> s.MembershipType).ToList();
