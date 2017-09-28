@@ -205,11 +205,20 @@
     <Compile Include="Migrations\201709280420492_InitialModel.Designer.cs">
       <DependentUpon>201709280420492_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709281420544_AddIsSubscribedNewsletterCustomer.cs" />
+    <Compile Include="Migrations\201709281420544_AddIsSubscribedNewsletterCustomer.Designer.cs">
+      <DependentUpon>201709281420544_AddIsSubscribedNewsletterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709281425416_AddMembershipTyoe.cs" />
+    <Compile Include="Migrations\201709281425416_AddMembershipTyoe.Designer.cs">
+      <DependentUpon>201709281425416_AddMembershipTyoe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -296,6 +305,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709280420492_InitialModel.resx">
       <DependentUpon>201709280420492_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709281420544_AddIsSubscribedNewsletterCustomer.resx">
+      <DependentUpon>201709281420544_AddIsSubscribedNewsletterCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709281425416_AddMembershipTyoe.resx">
+      <DependentUpon>201709281425416_AddMembershipTyoe.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
