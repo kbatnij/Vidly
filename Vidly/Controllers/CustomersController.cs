@@ -24,7 +24,12 @@ namespace Vidly.Controllers
 
         public ViewResult New()
         {
-            return View();
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel()
+            {
+                MembershipTypes = membershipTypes
+            };
+            return View(viewModel);
         }
 
         public ViewResult Index()
