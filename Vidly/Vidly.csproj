@@ -249,6 +249,10 @@
     <Compile Include="Migrations\201709281751405_MoshGenreSchema.Designer.cs">
       <DependentUpon>201709281751405_MoshGenreSchema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709292102321_MoshDiff.cs" />
+    <Compile Include="Migrations\201709292102321_MoshDiff.Designer.cs">
+      <DependentUpon>201709292102321_MoshDiff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -381,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709281751405_MoshGenreSchema.resx">
       <DependentUpon>201709281751405_MoshGenreSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709292102321_MoshDiff.resx">
+      <DependentUpon>201709292102321_MoshDiff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
